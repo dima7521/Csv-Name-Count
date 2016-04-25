@@ -86,7 +86,8 @@ class person():
                     Otherwise the names are spelled differently one from another,
                     and therefore are unequal.
                     """
-                    return bool(not(unequal_chars_indexes[0] in vowels and unequal_chars_indexes[1] in vowels))
+                    return bool(not(ln1[unequal_chars_indexes[0]] in vowels and ln1[unequal_chars_indexes[1]] in vowels
+                                    and ln2[unequal_chars_indexes[0]] in vowels and ln2[unequal_chars_indexes[1]] in vowels))
 
                 else:
                     # Most chances the names are different
@@ -210,7 +211,7 @@ if __name__ == "__main__":
     # Mine additional ones ...
     # 1) Do this and the program will exit with code : 2 - print countUniqueNames("", "Egli", "Deborah", "Egli", "Michelle Egli")
 
-    # 2) Three persons
+    # 2) Three persons - Prints 3
     print countUniqueNames("Deborah", "Egli", "Al", "Eglias", "Michelle Egli")
 
     # 3) Last name misspelling - 2 letters : Prints 1, as it accounts for occasional misspelling
