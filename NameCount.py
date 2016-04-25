@@ -181,6 +181,7 @@ def countUniqueNames(billFirstName, billLastName,
     # Compare the profiles
     first_is_second = are_the_same_people(p1, p2)
     first_is_third = are_the_same_people(p1, p3)
+    second_is_third = are_the_same_people(p2, p3)
 
     # And now to the last (and simple) logic :
     if first_is_second:
@@ -190,6 +191,9 @@ def countUniqueNames(billFirstName, billLastName,
             return 2
     else:
         if first_is_third:
+            return 2
+
+        if second_is_third:
             return 2
         else:
             return 3
